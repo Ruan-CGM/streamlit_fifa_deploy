@@ -15,9 +15,10 @@ if "data" not in st.session_state:
     df_data = df_data.sort_values(by="Overall", ascending=False)
     st.session_state["data"] = df_data
 
-btn = st.button("🔎Acesse os dados no Kaggle")
-if btn:
-    webbrowser.open("https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data")
+btn = st.link_button(
+    "🔎Acesse os dados no Kaggle", 
+    "https://www.kaggle.com/datasets/kevwesophia/fifa23-official-datasetclean-data"                
+    )
 
 st.markdown(
     """

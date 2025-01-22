@@ -8,7 +8,7 @@ st.set_page_config(
 
 if "data" not in st.session_state:
     st.error("Dados não carregados. Redirecionando para a página inicial.")
-    st.query_params.to_dict(page="1_🏡_home.py")
+    st.query_params(page="1_🏡_home.py")
 else:
     df_data = st.session_state["data"]
 

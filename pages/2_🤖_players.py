@@ -6,11 +6,11 @@ st.set_page_config(
     layout="wide",
 )
 
-if "data" not in st.session_state:
-    st.error("Dados não carregados. Redirecionando para a página inicial.")
-    st.query_params(["1_🏡_home.py"])
-else:
-    df_data = st.session_state["data"]
+# if "data" not in st.session_state:
+#     st.error("Dados não carregados. Redirecionando para a página inicial.")
+#     st.query_params(["1_🏡_home.py"])
+# else:
+df_data = st.session_state["data"]
 
 clubes = df_data["Club"].unique()
 club = st.sidebar.selectbox("Clube", clubes)
